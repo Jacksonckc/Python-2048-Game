@@ -1,10 +1,12 @@
 import random
 from action import Action
 
+# Generates new numbers on the board
 class NewNumberAction(Action):
     def __init__(self,board):
         self._board = board
 
+    # Use randint function to randomly generate a number
     def generate_new_num(self):
         chance = random.randint(1,20)
         if chance == 1:
@@ -16,7 +18,7 @@ class NewNumberAction(Action):
 
     def execute(self):
         
-
+        # Generate 2 numbers, the 2 numbers come from the generate_new_num function in this class.
         numberNeeded = 2
         while numberNeeded > 0:
             rowNum = random.randint(0, self._board.get_boardSize() - 1)

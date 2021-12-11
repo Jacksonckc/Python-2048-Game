@@ -1,5 +1,6 @@
 from numberLength import NumberLength
 
+# This class prints the actors, according to the tag.
 class Output:
     def __init__(self):
         self.numLength = NumberLength()
