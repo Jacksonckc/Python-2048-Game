@@ -1,8 +1,19 @@
 
 
 from action import Action
+# Description:
 
 # Deals with all the merges according to the current board numbers and the direction from user input 
+
+# OOP Principles Used:
+
+# encapsulation, inheritance, polymorphism
+
+# Reasoning:
+
+# A child class of Action.
+# Variables are private
+
 class MergeAction(Action):
     def __init__(self, board):
         # Get the board from the generate board class
@@ -46,8 +57,10 @@ class MergeAction(Action):
 
     # Use the tempBoard to save the changes made by merging the board to the left and use the setter to set the board.
     def mergeLeft(self):
-        tempBoard = [[], [], [], []]
+        tempBoard = []
+
         for i in range(self._board.get_boardSize()):
+            tempBoard.append([])
             # Loop through all the rows and merge each row to the left
             tempBoard[i] = self.mergeOneRowLeft(self._board.get_board()[i])
         self._board.set_board(tempBoard)
@@ -60,8 +73,9 @@ class MergeAction(Action):
         return tempRow
 
     def mergeRight(self):
-        tempBoard = [[], [], [], []]
+        tempBoard = []
         for i in range(self._board.get_boardSize()):
+            tempBoard.append([])
             # Use the reverse function to reverse each row on the board, and merge all the rows left, reverse them back to achieve merging the board right
             tempBoard[i] = self.reverse(self._board.get_board()[i])
             tempBoard[i] = self.mergeOneRowLeft(tempBoard[i])

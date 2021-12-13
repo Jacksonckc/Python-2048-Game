@@ -1,10 +1,26 @@
+from random import randint
 from actor import Actor
+import random
 
-# A child class of actor
+# Description:
+
+# child class for Actor, modifies the tag variable here.
+
+# OOP Principles Used:
+
+# Polymorphism, inheritance, encapsolation 
+
+# Reasoning:
+
+# Board class is a child class of actor, it uses tag variable inheried from actor. 
+# Some of the variables are only accessible here inside the class itself.
+# actor.get_instruction is used to get the instruction in the ouput class. Using actor instead of the actual class name
+
+
 class Board(Actor):
     def __init__(self):
         super().__init__()
-        self._boardSize = 4
+        self._boardSize = random.randint(4, 6)
         self._board = []
         self.set_tag('board')
 

@@ -1,6 +1,16 @@
 from numberLength import NumberLength
 
+
+# Description:
+
 # This class prints the actors, according to the tag.
+
+# OOP Principles Used:
+
+# Not in this class
+
+
+
 class Output:
     def __init__(self):
         self.numLength = NumberLength()

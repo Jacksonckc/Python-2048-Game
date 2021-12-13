@@ -1,6 +1,19 @@
 from actor import Actor
 
+# Description:
+
 # Shows instructions to the users at the beginning or mid game
+
+# OOP Principles Used:
+
+# encapsulation, inheritance, polymorphism
+
+# Reasoning:
+
+# Uses set_tag function from the parent class.
+# Some variables are private variables. 
+# actor.get_instruction is used to get the instruction in the ouput class. Using actor instead of the actual class name
+
 class Instruction(Actor):
     def __init__(self):
         super().__init__()

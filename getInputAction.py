@@ -1,6 +1,17 @@
 from action import Action
 
-# Gets the user input
+# Description:
+
+# This class gets the user input.
+
+# OOP Principles Used:
+
+# Polymorphism, inheritance, encapsolation 
+
+# Reasoning:
+
+# GetInputAction class is a child class of action, it uses execute function inheried from action. 
+# Some of the variables are only accessible here inside the class itself.
 class GetInputAction(Action):
     def __init__(self):
         self._direction = None
