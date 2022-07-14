@@ -1,4 +1,4 @@
-# CSE-230-Final
+# 2048
 
 The game that I will be creating is called 2048, 2048 game has a goal of getting up to number 2048. 
 The game will randomly generate number 2 or 4 at random positions on the board. 
